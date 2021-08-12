@@ -1,0 +1,30 @@
+{
+  "name": "guard-location",
+  "version": "1.5.1",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "express": "pm2 start app.js"
+  },
+  "dependencies": {
+    "@nuxtjs/ngrok": "^2.0.0",
+    "nuxt": "^2.14.6",
+    "pusher-js": "^7.0.3",
+    "vue-browser-geolocation": "^1.8.0",
+    "vue-country-code": "^1.1.2",
+    "vue2-google-maps": "^0.10.7",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "socket.io": "^4.1.3"
+  },
+  "devDependencies": {
+    "@indielayer/eslint-config-vue": "^1.0.0",
+    "@nuxtjs/vuetify": "^1.11.3",
+    "eslint": "^6.8.0",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.1"
+  }
+}
