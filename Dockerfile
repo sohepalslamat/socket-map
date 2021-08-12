@@ -4,7 +4,7 @@ RUN apt-get update
 
 ENV APP_ROOT /app
 
-WORKDIR ${APP_ROOT}
+WORKDIR /app
 
 COPY ./package*.json ./
 

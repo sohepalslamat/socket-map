@@ -9,6 +9,5 @@ services:
       - "3001:3001"
       - "4000:4000"
     restart: always
-    command:
-      - "npm run start"
-      - "npm run express"
+    command: >
+     bash -c "npm run start && npm run express"
