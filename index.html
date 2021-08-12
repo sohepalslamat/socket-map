@@ -3,7 +3,7 @@
 <head>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
-        
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
@@ -16,12 +16,12 @@
       <v-main>
          <div class="text-center">
          <h1 class="my-2">client2</h1>
-         
+
          <h4 v-for="item in data">
          <span :style="item.client=='client2' ? 'color:red;' : ''">{{item.client}}: {{item.body}}</span>
          </h4>
          <v-row class="justify-center">
-            <v-text-field 
+            <v-text-field
                v-model="sneddata"
                class="col-5 my-3"
                label="text"
@@ -31,7 +31,7 @@
             ></v-text-field>
          </v-row>
          <v-btn color="success" @click="send" >send</v-btn>
-      
+
       </div>
       </v-main>
     </v-app>
@@ -40,12 +40,12 @@
   <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
   <script src = "/socket.io/socket.io.js"></script>
   <script>
-    
+
     new Vue({
       el: '#app',
       vuetify: new Vuetify() ,
       mounted(){
-         this.socket = io("ws://localhost:4000")
+         this.socket = io()
          this.socket.on("hello", (arg) => {
            this.data.push({client: 'client2', body: arg})
          })
