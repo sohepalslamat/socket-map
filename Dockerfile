@@ -18,6 +18,8 @@ ENV NODE_ENV=production
 
 RUN npm run build
 
+RUN npm run express
+
 EXPOSE 3001
 
 ENV NUXT_HOST=0.0.0.0
